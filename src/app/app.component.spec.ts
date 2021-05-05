@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-ifa'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-ifa');
+    expect(app.title).toEqual('Curso Angular - IFA');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-ifa app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('app is running!');
   });
 });
