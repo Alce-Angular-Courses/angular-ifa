@@ -1,0 +1,12 @@
+<h3>
+    Saludo
+</h3>
+<div class="form-group">
+  <label for="nombre">Dime tu nombre</label>
+  <input type="text" [(ngModel)]='nombre'
+    class="form-control" id="nombre"  [placeholder]="mensaje">
+</div>
+<button type="button" class="btn btn-primary"
+    (click)="onClickBorrar($event)  ">Borrar</button>
+
+<p> Hola {{ nombre ? nombre.toUpperCase() : 'amigo' }}!</p>

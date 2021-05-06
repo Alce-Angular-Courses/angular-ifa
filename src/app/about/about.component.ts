@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ifa-about',
   template: `
-    <p>
+    <div class="col-12">
       about works!
-    </p>
+    </div>
   `,
   styles: [
   ]

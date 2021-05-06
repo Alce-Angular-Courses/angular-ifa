@@ -1,10 +1,12 @@
+import { registerLocaleData } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import LocaleEs from "@angular/common/locales/es";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { HomeModule } from './home/home.module';
+
+registerLocaleData(LocaleEs, 'es')
 
 @NgModule({
   declarations: [
@@ -13,8 +15,7 @@ import { HomeModule } from './home/home.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
-    HomeModule
+    CoreModule
   ],
   providers: [],
   exports: [],

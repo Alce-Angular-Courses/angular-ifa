@@ -1,0 +1,13 @@
+<h3>
+    Saludo Referencias
+</h3>
+<div class="form-group">
+  <label for="nombre-ref">Dime tu nombre</label>
+  <input type="text" #nombreRef
+    (input)='nombreRef.value = nombreRef.value'
+    class="form-control" id="nombre-ref">
+</div>
+<button type="button" class="btn btn-primary"
+    (click)="nombreRef.value = ''">Borrar</button>
+
+<p> Hola {{ nombreRef.value ? nombreRef.value.toUpperCase() : 'amigo' }}!</p>

@@ -1,0 +1,46 @@
+<h2>
+    Tareas
+</h2>
+
+<div class="row">
+    <div class="col-6">
+        <div class="form-group">
+        <label for="nombre">Nombre de la tarea</label>
+        <input type="text" [(ngModel)]='tarea.nombre'
+            class="form-control" id="nombre" >
+        </div>
+        <div class="form-group">
+            <label for="nombre">Responsable de la tarea</label>
+            <input type="text" [(ngModel)]='tarea.responsable'
+            class="form-control" id="nombre">
+        </div>
+        <button type="button" class="btn btn-primary"
+            (click)="onClickAdd()  ">Añadir</button>
+    </div>
+    <div class="col-6" *ngIf="tareas.length; else sinTareas">
+        <h3>Lista de tareas</h3>
+        <ul>
+            <li *ngFor="let item of tareas; let i = index">
+                <input type="checkbox" [(ngModel)]="item.isCompleted"
+                (change)="onChangeCompleted()">
+                <!-- <span [class.completed]="item.isCompleted"> -->
+                <span [ngClass]="{'completed': item.isCompleted}">
+                    {{ item.nombre }}
+                    {{ item.responsable ? ' - ': '' }}
+                    {{ item.responsable | titlecase}}
+                </span>
+                <span class="boton" (click)="onClickDelete(i)">
+                    🗑
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #sinTareas>
+        <p class="col-6">
+            Anímate a empezar tu lista de tareas
+        </p>
+    </ng-template>
+
+</div>
+
