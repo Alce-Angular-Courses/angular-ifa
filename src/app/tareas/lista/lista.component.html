@@ -1,0 +1,20 @@
+<h2>Tareas: Varios componentes</h2>
+<ifa-nueva class="col-6" (addTarea)="onAddTarea($event)"></ifa-nueva>
+
+
+<div class="col-6" *ngIf="tareas.length; else sinTareas">
+    <h3>Lista de tareas</h3>
+    <ul>
+        <li *ngFor="let item of tareas; let i = index">
+            <ifa-tarea [tarea]="item" [indice]="i"
+                (deleteTarea)="onDeleteTarea($event)"
+                (changeTarea)="onChangeTarea($event)"></ifa-tarea>
+        </li>
+    </ul>
+</div>
+
+<ng-template #sinTareas>
+    <p class="col-6">
+        Anímate a empezar tu lista de tareas
+    </p>
+</ng-template>

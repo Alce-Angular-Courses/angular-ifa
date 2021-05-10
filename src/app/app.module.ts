@@ -1,5 +1,5 @@
 import { registerLocaleData } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import LocaleEs from "@angular/common/locales/es";
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,7 @@ registerLocaleData(LocaleEs, 'es')
     AppRoutingModule,
     CoreModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue:'es'}],
   exports: [],
   bootstrap: [AppComponent]
 })

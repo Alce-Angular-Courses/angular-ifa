@@ -5,7 +5,8 @@
         </div>
         <p class="col-12 text-center">
            <!--  {{ fecha.toLocaleString() }} -->
-           {{ fecha | date : 'fullDate'}}
+           <!-- {{ fecha | date : 'fullDate' : null: 'es'}} -->
+           {{ fecha | date : 'fullDate' }}
         </p>
     </div>    
 </footer>
