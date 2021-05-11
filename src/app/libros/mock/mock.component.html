@@ -1,0 +1,25 @@
+<h3>
+    Mock Libros
+</h3>
+<div class="form-group">
+  <input type="text" [(ngModel)]='clave'
+    class="form-control" id="nombre"  placeholder="Dime que buscar">
+</div>
+<button type="button" class="btn btn-primary"
+    (click)="onClickBuscar()">Buscar</button>
+<button type="button" class="btn btn-primary"
+    (click)="onClickBuscarAsync()">BuscarAsync</button>
+<button type="button" class="btn btn-primary"
+    (click)="onClickBuscarRx()">BuscarRx</button>
+
+<div>
+    <h3>Libros encontrados</h3>
+    <ul>
+        <li *ngFor="let item of libros">
+            {{item.id}} -
+            {{item.titulo}} -
+            {{item.autor}} -
+            {{item.fecha}}
+        </li>
+    </ul>
+</div>

@@ -8,7 +8,6 @@ import { ListaComponent } from './lista/lista.component';
 import { NuevaComponent } from './nueva/nueva.component';
 import { TareaComponent } from './tarea/tarea.component';
 
-
 @NgModule({
   declarations: [
     TareasComponent,

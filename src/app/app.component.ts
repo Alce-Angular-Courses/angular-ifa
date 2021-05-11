@@ -19,6 +19,7 @@ export class AppComponent {
       {name: 'Inicio', path: 'home'},
       {name: 'Tareas', path: 'tareas'},
       {name: 'Cursos', path: 'cursos'},
+      {name: 'Libros', path: 'libros'},
       {name: 'About', path: 'about'},
     ]
   }

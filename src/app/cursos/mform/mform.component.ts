@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Curso, Turno } from 'src/app/model/alumno';
 import { CURSOS, TURNOS } from 'src/app/model/cursos.data';
 
@@ -19,7 +19,7 @@ export class MformComponent implements OnInit {
     this.cursos = CURSOS
     this.turnos = TURNOS
     this.formAlumno = this.fb.group({
-      nombre: [''],
+      nombre: ['', [Validators.required, Validators.minLength(2)]],
       apellidos: [''],
       dni: [''],
       email:  [''],
@@ -29,5 +29,9 @@ export class MformComponent implements OnInit {
       turno:  [null],
       curso:  [null]
     })
+  }
+
+  onSubmit() {
+    console.log('Enviando', this.formAlumno.value)
   }
 }
